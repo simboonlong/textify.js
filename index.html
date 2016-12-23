@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>textify</title>
+    <meta name="author" content="Sim Boon Long">
+    <meta name="description" content="Add fancy animation/effects to letters.">
+    <link rel="stylesheet" type="text/css" href="css/textify.css">
+</head>
+<body>
+    <div id="split-1" class="split">something cool is coming</div>
+    <div id="split-2" class="split">yup this is awesome</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+    <script src="js/textify.js"></script>
+    <script>
+
+    // Initialize
+    var splitOne = new SplitText( $('#split-1') );
+    splitOne.init().animate({
+        delay: 0,
+        x: 10,
+        y: 20,
+        rotationX: 165,
+        rotationY: 40,
+        rotationZ: 20,
+        duration: 1.3,
+        opacity: 0,
+        staggerDuration: 0.1,
+        easeType : Back.easeOut
+    });
+    var splitTwo = new SplitText( $('#split-2') );
+    splitTwo.init().animate({
+        delay: 0.7,
+        x: 40,
+        y: 20,
+        rotationX: 20,
+        rotationY: 40,
+        rotationZ: 75,
+        duration: 1.7,
+        opacity: 0,
+        staggerDuration: 0.1,
+        easeType : Expo.easeOut
+    });
+
+    </script>
+</body>
+</html>
