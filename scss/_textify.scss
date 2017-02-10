@@ -1,0 +1,26 @@
+// =====================================================================
+// textify
+// =====================================================================
+
+
+.split {
+
+    .word,
+    .word-spacing,
+    .letter {
+        float: left;
+        font-size: 72px; /* temporary */
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+
